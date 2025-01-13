@@ -28,6 +28,10 @@ io.on('connection', (socket) => {
         socket.broadcast.emit("user_join", data)
     });
 
+    socket.on("call", (data) => {
+        socket.broadcast.emit("incoming_call", data)
+    });
+
 
 
 
